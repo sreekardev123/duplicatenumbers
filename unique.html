@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        num = prompt("enter a number:").split("").map(Number)
+        console.log(num)
+        emp=[];uni="",dup=""
+       
+        for(i of num ){
+            if(!emp.includes(i)){
+                emp.push(i)
+            }
+           
+        }
+        
+        console.log(emp)
+        for(i of emp){
+            c=0
+            for(j of num){
+                if(i == j){
+                    c++
+                }
+            }
+            if( c==1){
+                uni+=i+" "
+            }
+            else{
+                dup+=i+" "
+            }
+        }
+        if(uni.length == 2){
+            console.log("uniques is "+uni)
+        }
+        else{
+            console.log("uniques are" +uni)
+        }
+        if(dup.length == 2){
+            console.log("duplicates is "+dup)
+        }
+        else{
+            console.log("duplicates are" +dup)
+        }
+    </script>
+</body>
+</html>
